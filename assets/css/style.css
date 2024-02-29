@@ -1795,8 +1795,9 @@ textarea.is-invalid {
   position: absolute;
   top: 0;
 }
-.th-menu-wrapper .mobile-logo svg {
-  max-width: 185px;
+
+.th-menu-wrapper .mobile-logo img {
+  max-width: 150px;
 }
 .th-menu-wrapper .th-menu-toggle {
   border: none;
