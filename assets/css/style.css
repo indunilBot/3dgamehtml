@@ -1,7 +1,7 @@
 @use "sass:math";
 :root {
-  --theme-color: #45f882;
-  --theme-color2: #ffbe18;
+  --theme-color: #C3073f;
+  --theme-color2: #949494;
   --theme-color3: #6240cf;
   --title-color: #0b0e13;
   --body-color: #969eb2;
@@ -33,6 +33,7 @@ html,
 body {
   scroll-behavior: auto !important;
 }
+
 body {
   font-family: var(--body-font);
   font-size: 16px;
@@ -3640,6 +3641,20 @@ hr.title-line {
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
+
+.background-clip{
+  position: absolute;
+  right: auto;
+  bottom: 0;
+  z-index: -1;
+  height: 100vw;
+  border: 1px solid white;
+}
+
+.sticky-wrapper{
+  color: white ;
+}
+
 .background-image,
 [data-bg-src] {
   background-repeat: no-repeat;
