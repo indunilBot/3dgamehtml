@@ -943,6 +943,12 @@ ul.wp-block-rss a {
   .page--content.clearfix + .th-comment-form {
     margin-top: 24px;
   }
+  .hero-background-video {
+    margin-top: -200px;
+    min-width: 100%;
+    min-height: 100%;
+    border: 1px solid ;
+  }
 }
 @media (max-width: 1399px) {
   :root {
@@ -2194,80 +2200,89 @@ textarea.is-invalid {
     box-shadow: 0.5em -0.5em 0 0 currentcolor;
   }
 }
+
+
+
+/* new style */
+
+
+
 .th-btn {
+  padding: 10px 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 3px solid #ff4747; /* Red border */
+  background: transparent;
   position: relative;
-  z-index: 2;
-  overflow: hidden;
-  vertical-align: middle;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  text-align: center;
-  background-color: var(--theme-color);
-  color: var(--title-color);
-  font-family: var(--title-font);
-  font-size: 16px;
   font-weight: 700;
-  line-height: 1;
-  padding: 20px 30px;
-  min-width: 200px;
-  border-radius: 0px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-clip-path: polygon(
-    15px 0%,
-    calc(100% - 15px) 0%,
-    100% 50%,
-    calc(100% - 15px) 100%,
-    15px 100%,
-    0% 50%
-  );
-  clip-path: polygon(
-    15px 0%,
-    calc(100% - 15px) 0%,
-    100% 50%,
-    calc(100% - 15px) 100%,
-    15px 100%,
-    0% 50%
-  );
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
 }
-.th-btn:before,
-.th-btn:after {
-  content: "";
+
+
+/* .th-btn::before {
+  content: '';
   position: absolute;
-  background-color: var(--title-color);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ff4747, transparent);
+  transition: all 0.5s ease;
   z-index: -1;
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-  top: 5px;
-  left: 5px;
-  width: 16px;
-  height: calc(100% - 10px);
-  border-radius: 0;
-  transition: -webkit-clip-path 0.2s ease;
-  -webkit-transition: -webkit-clip-path 0.2s ease;
-  transition: clip-path 0.2s ease;
-  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
-  -webkit-clip-path: polygon(
-    85% 0,
-    100% 0,
-    15% 50%,
-    100% 100%,
-    85% 100%,
-    0% 50%
-  );
-  clip-path: polygon(85% 0, 100% 0, 15% 50%, 100% 100%, 85% 100%, 0% 50%);
+} */
+
+.th-btn:hover::before {
+  left: 100%;
 }
+
+.th-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, transparent, #ff4747, transparent);
+  transition: all 0.s ease;
+  z-index: -1;
+}
+
+.th-btn:hover::after {
+  right: 100%;
+}
+
+.th-btn:focus {
+  outline: none;
+}
+
+.th-btn:hover {
+  color: #121212;
+  background: #ff4747;
+  border-color: #ff4747;
+  box-shadow: 0 0 10px #ff4747, 0 0 20px #ff4747, 0 0 30px #ff4747;
+}
+
+
+
+
+
+
+
+/* new style end */
+
+
+
+
+
+
+
+
+
 .th-btn:after {
   right: 5px;
   left: auto;
@@ -2281,16 +2296,9 @@ textarea.is-invalid {
 }
 .th-btn:hover,
 .th-btn.active {
-  background: var(--white-color);
-  -webkit-clip-path: polygon(
-    0px 0%,
-    100% 0%,
-    100% 50%,
-    100% 100%,
-    0 100%,
-    0% 50%
-  );
-  clip-path: polygon(0px 0%, 100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
 }
 .th-btn:hover:before,
 .th-btn:hover:after,
@@ -2313,6 +2321,20 @@ textarea.is-invalid {
     0 100%
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .th-btn.style2 {
   background-color: var(--theme-color2);
 }
