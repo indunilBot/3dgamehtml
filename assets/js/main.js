@@ -639,23 +639,30 @@
 
 
 
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('col-auto nav ul li a');
+// let sections = document.querySelectorAll('section');
+// let navLinks = document.querySelectorAll('col-auto nav ul li a');
 
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-      let top = window.scrollY;
-      let offset = sec.offsetTop - 150;
-      let height = sec.offsetHeight;
-      let id = sec.getAttribute('id');
+// window.onscroll = () => {
+//     sections.forEach(sec => {
+//       let top = window.scrollY;
+//       let offset = sec.offsetTop - 150;
+//       let height = sec.offsetHeight;
+//       let id = sec.getAttribute('id');
 
-      if(top >= offset && top < offset + height){
-        navLinks.forEach(links => {
-          links.classList.remove('active');
-          document.querySelector('nav ul li a[href*=' + id + ']').classList.add('active');
-        })
-      }
+//       if(top >= offset && top < offset + height){
+//         navLinks.forEach(links => {
+//           links.classList.remove('active');
+//           document.querySelector('nav ul li a[href*=' + id + ']').classList.add('active');
+//         })
+//       }
 
-    })
-}
+//     })
+// }
+
+// Initialize SmoothScroll with default options
+smoothscroll.polyfill();
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 800, // Adjust the scrolling speed as needed
+  offset: 80, // Adjust the scroll offset if you have a fixed header
+});
