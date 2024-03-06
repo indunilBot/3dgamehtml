@@ -48,7 +48,7 @@
       }
     }
 
-    .hero-background-video {
+    .hero-background-video, .hero-background-mvideo {
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -58,6 +58,40 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+/* .tokenized-background-video {
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  align-items: center; 
+  justify-content: center;
+  min-width: 50%; 
+  min-height: 50%; 
+  border-radius: 50px;
+  object-fit: cover;
+} */
+
+
+/* Initially hide the mobile video to only show it in mobile views */
+.hero-background-mvideo {
+  display: none;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  /* Hide the desktop background video */
+  .hero-background-video {
+    display: none;
+  }
+
+  /* Show the mobile background video */
+  .hero-background-mvideo {
+    display: block;
+  }
 }
 
   </style>
@@ -83,6 +117,7 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="#about">ABOUT US</a></li>
             <li><a href="#games">GAME</a></li>
+            <li><a href="#tokenized">TOKENIZED</a></li>
             <li><a href="#teams">TEAMS</a></li>
           </ul>
         </div>
@@ -139,6 +174,7 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#games">GAMES</a></li>
+                    <li><a href="#tokenized">TOKENIZED</a></li>
                     <li><a href="#teams">TEAMS</a></li>
                   </ul>
                 </nav>
@@ -157,9 +193,9 @@
                 <div class="header-button" >
                   <div class="d-xxl-block d-none">
                     <a href="#" class="th-btn"
-                      ><i class="fa-brands fa-twitch me-1"></i> Live
-                      Streaming</a
-                    >
+                      > Buy Now</a
+                    > 
+                    <!-- <i class="fa-brands fa-twitch me-1"></i> -->
                   </div>
                 </div>
               </div>
@@ -172,18 +208,32 @@
     <div
       class="th-hero-wrapper hero-1"
       id="hero"
-      data-bg-src="assets/img/hero/hero-bg1-1.png"
+
     >
+    <!-- data-bg-src="assets/img/hero/hero-bg1-1.png" -->
+
       <!-- <div class="video-bg">
         <video autoplay loop muted plays-inline class="background-clip">
           <source src="assets/video/video.mp4" type="video/mp4" />
         </video>
       </div> -->
 
-      <!-- <video autoplay muted loop playsinline class="hero-background-video">
-        <source src="assets/video/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
+      
+        <video autoplay muted loop playsinline class="hero-background-video">
+          <source src="assets/video/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
+
+        <video autoplay muted loop playsinline class="hero-background-mvideo">
+          <source src="assets/video/mvideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
+
+
+
+
+
+  
       
 
       <div class="container">
@@ -218,10 +268,10 @@
             data-wow-delay="0.7s"
           >
             <a href="#" class="th-btn"
-              >EXPLORE MORE <i class="fa-solid fa-arrow-right ms-2"></i
+              >CHART<i class="fa-solid fa-arrow-right ms-2"></i
             ></a>
             <a href="#" class="th-btn"
-              >BROWSE GAMES <i class="fa-solid fa-arrow-right ms-2"></i
+              >GAMES <i class="fa-solid fa-arrow-right ms-2"></i
             ></a>
           </div>
           </div>
@@ -493,7 +543,7 @@
                   >
                     <span class="sub-title"># Insights into Our Gaming Portal</span>
                     <h2 class="sec-title mb-0">
-                      Crafting Epics in the Gaming Cosmos
+                      About Us
                     </h2>
                   </div>
                 </div>
@@ -802,7 +852,10 @@
 
 
 
-    <section class="space">
+    <section class="space" id="tokenized">
+
+      
+      
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -822,8 +875,36 @@
         <div
           class="feature-sec-wrap1"
           data-bg-src="assets/img/bg/feature-sec1-bg.png"
+
+
         >
-          <div class="feature-card-wrap">
+
+        
+
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <video autoplay muted loop playsinline class="tokenized-background-video"
+            style="width: auto; height: auto; top: 70%; transform: translate(-50%, -50); z-index: 10; border-radius: 50px; object-fit: cover;"
+          >
+            <source src="assets/video/video.mp4" type="video/mp4">
+          </video>
+      
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="feature-card-wrap" style="z-index: 12;">
             <div class="feature-card-border">
               <div class="feature-card">
                 <div
@@ -842,15 +923,15 @@
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <h3 class="feature-card-title">3D Games Lounge</h3>
+                  <h3 class="feature-card-title ">Tax</h3>
                   <p class="feature-card-text">
-                    A virtual lounge space designed for relaxation between gaming sessions, featuring comfortable digital seating, interactive snack and drink options, and virtual vending machines for refreshments.
+                    Our Price are Fixed for Some Standard Services.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="feature-card-wrap">
+          <div class="feature-card-wrap ">
             <div class="feature-card-border">
               <div class="feature-card">
                 <div
@@ -869,9 +950,9 @@
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <h3 class="feature-card-title">Virtual Training Grounds</h3>
+                  <h3 class="feature-card-title">Revenue Share</h3>
                   <p class="feature-card-text">
-                    A digital lounge area equipped with cozy virtual seating for unwinding between gaming drills, alongside interactive options for snacks, drinks, and a virtual vending machine for quick refreshments.
+                    Our Price are Fixed for Some Standard Services.
                   </p>
                 </div>
               </div>
@@ -896,9 +977,9 @@
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <h3 class="feature-card-title">Digital Broadcast Lounge</h3>
+                  <h3 class="feature-card-title">Price</h3>
                   <p class="feature-card-text">
-                    A sleek section of the 3D gaming website designed as a broadcasting studio, complete with virtual comfortable seating for downtime during gaming marathons. 
+                    Our Price are Fixed for Some Standard Services.
                   </p>
                 </div>
               </div>
