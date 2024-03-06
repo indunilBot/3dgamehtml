@@ -661,8 +661,3 @@
 // }
 
 // Initialize SmoothScroll with default options
-smoothscroll.polyfill();
-const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 800, // Adjust the scrolling speed as needed
-  offset: 80, // Adjust the scroll offset if you have a fixed header
-});
