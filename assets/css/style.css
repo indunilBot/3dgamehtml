@@ -14753,6 +14753,7 @@ span.select2-selection.select2-selection--single:focus {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 .feature-card-wrap:nth-of-type(odd) {
   -webkit-box-pack: end;
