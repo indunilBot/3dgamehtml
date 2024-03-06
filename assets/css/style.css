@@ -31,7 +31,6 @@
 }
 html,
 body {
-  /* scroll-behavior: auto !important; */
   scroll-behavior: smooth;
 }
 
